@@ -28,7 +28,7 @@ int main()
     {
         cout << s2[i].name << " ";
         cout << s2[i].rollNo << " ";
-        cout << s2[i].marks << " ";
+        cout << s2[i].marks;
         cout << endl;
     }
 
@@ -44,5 +44,22 @@ int main()
     }
     cout<<"maximum marks scored by "<<s2[index].name<<": ";
     cout<<max;
+
+    for(int i = 0; i < 5; i++){
+        for(int j = i + 1; j < 5; j++){
+            if(s2[i].name < s2[j].name){
+                
+
+            }
+        }
+    }
     return 0;
 }
+
+/*
+a 1 56
+b 2 48
+c 3 95
+d 4 78
+e 5 16
+*/

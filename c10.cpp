@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 struct employee
@@ -7,8 +7,6 @@ struct employee
     char ename[20];
     int salary;
 };
-
-
 
 int main()
 {
@@ -21,11 +19,14 @@ int main()
     }
 
     int maxSal = 0;
-    for(int i=0; i<5; i++){
-        if(e1[i].salary > maxSal){
+    for (int i = 0; i < 5; i++)
+    {
+        if (e1[i].salary > maxSal)
+        {
             maxSal = e1[i].salary;
         }
     }
-    cout<<"maximum slary of employee is "<< maxSal;
+
+    cout << "maximum slary of employee is " << maxSal;
     return 0;
 }

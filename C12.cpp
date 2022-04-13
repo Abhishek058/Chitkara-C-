@@ -11,7 +11,7 @@ class Counter{
             count++;
         }
         void display() const{
-            count = count + 2;
+            // count = count + 2;
             cout<<count;
         }
         
@@ -19,7 +19,7 @@ class Counter{
 
 int main()
 {
-    const Counter c1;
+    Counter c1;
     c1.set();
     c1.inc();
     c1.display();

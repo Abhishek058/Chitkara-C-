@@ -1,36 +1,40 @@
 #include <iostream>
 using namespace std;
 
-class Counter
+class A
 {
-    int count;
+    int a;
+
+protected:
+    int b;
 
 public:
-    Counter(){
-        
-    }
-    void set()
+    friend class B;
+    void set(int i, int j)
     {
-        count = 0;
-    }
-    void inc()
-    {
-        count++;
-    }
-    void display() const
-    {
-        // count = count + 2;
-        cout << count;
+        a = i;
+        b = j;
     }
 };
 
-int
-main()
+class B
 {
-    Counter c1;
-    c1.set();
-    c1.inc();
-    c1.inc();
-    c1.display();
+    int x;
+
+protected:
+    int y;
+
+public:
+    void display(A obj)
+    {
+        cout << "a: " << obj.a << " b: " << obj.b;
+    }
+};
+
+int main()
+{
+    A obj1; B obj2;
+    obj1.set(10, 20);
+    obj2.display(obj1);
     return 0;
 }

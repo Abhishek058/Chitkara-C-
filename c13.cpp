@@ -6,6 +6,9 @@ class Counter
     int count;
 
 public:
+    Counter(){
+        
+    }
     void set()
     {
         count = 0;

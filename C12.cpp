@@ -4,6 +4,9 @@ using namespace std;
 class Counter{
     int count;
     public:
+    Counter(){
+        count = 0;
+    }
         void set(){
             count = 0;
         }
@@ -22,6 +25,10 @@ int main()
     Counter c1;
     c1.set();
     c1.inc();
+    c1.display();
+    const Counter c1;
+    // c1.set();
+    // c1.inc();
     c1.display();
     return 0;
 }

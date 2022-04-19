@@ -62,13 +62,12 @@ class Time{
             t3.s -= 60;
             t3.m -= 1;
         }
-        if(t3.s > 60){
-            t3.s -= 60;
-            t3.m -= 1;
+        if(t3.m > 60){
+            t3.m -= 60;
+            t3.h -= 1;
         }
-        if(t3.s > 60){
-            t3.s -= 60;
-            t3.m -= 1;
+        if(t3.h > 24){
+            t3.h -= 24;
         }
 
         return t3;
@@ -87,4 +86,12 @@ int main()
     complex obj7;
     obj7 = sumC(obj5, obj6);
     obj7.display();
+
+    Time t1(11, 26, 39) ,t2(14, 40, 40), t3;
+
+    t1.display();
+    t2.display();
+
+    t3 = t1.addTime(t2);
+    t3.display();
 }

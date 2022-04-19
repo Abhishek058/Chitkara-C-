@@ -42,6 +42,42 @@ complex sumC(complex c1, complex c2){
         return c3;
 }
 
+class Time{
+    int h, m, s;
+    public:
+    Time(int hour=0, int min=0, int sec=0){
+        h = hour;
+        m = min;
+        s = sec;
+    }
+
+    Time addTime(Time t1){
+        Time t3;
+
+        t3.s = t1.s + s;
+        t3.m = t1.m + m;
+        t3.h = t1.h + h;
+
+        if(t3.s > 60){
+            t3.s -= 60;
+            t3.m -= 1;
+        }
+        if(t3.s > 60){
+            t3.s -= 60;
+            t3.m -= 1;
+        }
+        if(t3.s > 60){
+            t3.s -= 60;
+            t3.m -= 1;
+        }
+
+        return t3;
+    }
+    void display(){
+        cout<<h<<" : "<<m<<" : "<<s;
+    }
+};
+
 int main()
 {
     Hello obj1, obj2;

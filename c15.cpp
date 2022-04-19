@@ -21,7 +21,6 @@ class Int{
 int main()
 {
     Hello obj1, obj2;
-    Int obj3;
-    Int obj4(5);
+    Int obj3, obj4(5);
     return 0;
 }

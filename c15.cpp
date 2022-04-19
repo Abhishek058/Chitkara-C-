@@ -60,11 +60,11 @@ class Time{
 
         if(t3.s > 60){
             t3.s -= 60;
-            t3.m -= 1;
+            t3.m += 1;
         }
         if(t3.m > 60){
             t3.m -= 60;
-            t3.h -= 1;
+            t3.h += 1;
         }
         if(t3.h > 24){
             t3.h -= 24;
@@ -73,7 +73,7 @@ class Time{
         return t3;
     }
     void display(){
-        cout<<h<<" : "<<m<<" : "<<s;
+        cout<<h<<" : "<<m<<" : "<<s<<endl;
     }
 };
 

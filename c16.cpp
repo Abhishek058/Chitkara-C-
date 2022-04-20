@@ -19,7 +19,12 @@ public:
     }
     void disp()
     {
-        cout << "X: " << x << " Y: " << y;
+        cout << "X: " << x << " Y: " << y << endl;
+    }
+
+    ~Point()
+    {
+        cout << "distructor called";
     }
 };
 

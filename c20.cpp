@@ -65,6 +65,7 @@ class student{
     int rollno;
     public:
     void setroll(){
+        cout<<"Rollno: ";
         cin>>rollno;
     }
     void disproll(){

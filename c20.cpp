@@ -60,6 +60,7 @@ class D: public A{
         cout<<"Z = "<<z<<endl;
     }
 };
+
 class student{
     int rollno;
     public:
@@ -89,22 +90,39 @@ class test{
     }
 };
 
-class result: public student, public test{
-    int avg; 
+class sports{
+    protected:
+    int score;
     public:
-    void dispavg(){
-        avg = (sub1+sub2+sub3)/3;
+    void setscore(){
+        cout<<"Sports: ";
+        cin>>score;
+    }
+    void dispscore(){
+        cout<<"score: "<<score;
+    }
+};
+
+class result: public student, public test, public sports{
+    int avg;
+    int total;
+    public:
+    void dispmarks(){
+        avg = (sub1+sub2+sub3+score)/4;
+        total = sub1+sub2+sub3+score;
         cout<<"Average Marks: "<<avg<<endl;
+        cout<<"Total Marks: "<<total<<endl;
+
     }
     void set(){
         setroll();
         setmarks();
+        setscore();
     }
     void dispdetail(){
         cout<<"***************Details*****************"<<endl;
         disproll();
         dispmarks();
-        dispavg();
     }
 };
 

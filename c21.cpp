@@ -14,7 +14,20 @@ public:
     }
 };
 
-class derived: public base
+class base1
+{
+public:
+    base1()
+    {
+        cout << "base1 class constructor" << endl;
+    }
+    ~base1()
+    {
+        cout << "base1 class destructor" << endl;
+    }
+};
+
+class derived: public base, public base1
 {
 public:
     derived()

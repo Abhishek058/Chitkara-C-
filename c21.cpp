@@ -40,8 +40,10 @@ public:
     }
 };
 
+// class student
 int main()
 {
     derived d;
+    cout<<"*********************"<<endl;
     return 0;
 }

@@ -1,127 +1,169 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class A{
+class A
+{
     int x;
-    protected:
+
+protected:
     int y;
-    public:
+
+public:
     int z;
-    void setx(){
-        cin>>x;
+    void setx()
+    {
+        cin >> x;
     }
-    void dispx(){
-        cout<<"X = "<<x<<endl;
-    }
-};
-
-class B: private A{
-    public:
-    void set(){
-        cout<<"X = ";
-        setx();
-        cin>>y;
-        cin>>z;
-    }
-    void disp(){
-        cout<<"X = ";
-        dispx();
-        cout<<"Y = "<<y<<endl;
-        cout<<"Z = "<<z<<endl;
-    }
-};
-class C: protected A{
-    public:
-    void set(){
-        cout<<"X = ";
-        setx();
-        cin>>y;
-        cin>>z;
-    }
-    void disp(){
-        cout<<"X = ";
-        dispx();
-        cout<<"Y = "<<y<<endl;
-        cout<<"Z = "<<z<<endl;
-    }
-};
-class D: public A{
-    public:
-    void set(){
-        cout<<"X = ";
-        setx();
-        cin>>y;
-        cin>>z;
-    }
-    void disp(){
-        cout<<"X = ";
-        dispx();
-        cout<<"Y = "<<y<<endl;
-        cout<<"Z = "<<z<<endl;
+    void dispx()
+    {
+        cout << "X = " << x << endl;
     }
 };
 
-class student{
+class B : private A
+{
+public:
+    void set()
+    {
+        cout << "X = ";
+        setx();
+        cin >> y;
+        cin >> z;
+    }
+    void disp()
+    {
+        cout << "X = ";
+        dispx();
+        cout << "Y = " << y << endl;
+        cout << "Z = " << z << endl;
+    }
+};
+class C : protected A
+{
+public:
+    void set()
+    {
+        cout << "X = ";
+        setx();
+        cin >> y;
+        cin >> z;
+    }
+    void disp()
+    {
+        cout << "X = ";
+        dispx();
+        cout << "Y = " << y << endl;
+        cout << "Z = " << z << endl;
+    }
+};
+class D : public A
+{
+public:
+    void set()
+    {
+        cout << "X = ";
+        setx();
+        cin >> y;
+        cin >> z;
+    }
+    void disp()
+    {
+        cout << "X = ";
+        dispx();
+        cout << "Y = " << y << endl;
+        cout << "Z = " << z << endl;
+    }
+};
+
+class student
+{
     int rollno;
-    public:
-    void setroll(){
-        cout<<"Rollno: ";
-        cin>>rollno;
+    string name;
+
+public:
+    void setroll()
+    {
+        cout << "Rollno: ";
+        cin >> rollno;
     }
-    void disproll(){
-        cout<<"Roll NO. = "<<rollno<<endl;
+    void setName()
+    {
+        cout << "Name: ";
+        cin >> name;
+    }
+    void dispName()
+    {
+        cout << name << endl;
+    }
+    void disproll()
+    {
+        cout << "Roll NO. = " << rollno << endl;
     }
 };
-class test{
-    protected:
+class test
+{
+protected:
     int sub1, sub2, sub3;
-    public:
-    void setmarks(){
-        cout<<"Sub1 marks: ";
-        cin>>sub1;
-        cout<<"Sub2 marks: ";
-        cin>>sub2;
-        cout<<"Sub3 marks: ";
-        cin>>sub3;
+
+public:
+    void setmarks()
+    {
+        cout << "Sub1 marks: ";
+        cin >> sub1;
+        cout << "Sub2 marks: ";
+        cin >> sub2;
+        cout << "Sub3 marks: ";
+        cin >> sub3;
     }
-    void dispmarks(){        
-        cout<<"Sub1 marks: "<<sub1<<endl;
-        cout<<"Sub2 marks: "<<sub2<<endl;
-        cout<<"Sub3 marks: "<<sub3<<endl;
+    void dispmarks()
+    {
+        cout << "Sub1 marks: " << sub1 << endl;
+        cout << "Sub2 marks: " << sub2 << endl;
+        cout << "Sub3 marks: " << sub3 << endl;
     }
 };
 
-class sports{
-    protected:
+class sports
+{
+protected:
     int score;
-    public:
-    void setscore(){
-        cout<<"Sports: ";
-        cin>>score;
+
+public:
+    void setscore()
+    {
+        cout << "Sports: ";
+        cin >> score;
     }
-    void dispscore(){
-        cout<<"score: "<<score;
+    void dispscore()
+    {
+        cout << "score: " << score;
     }
 };
 
-class result: public student, public test, public sports{
+class result : public student, public test, public sports
+{
     int avg;
     int total;
-    public:
-    void dispmarks(){
-        avg = (sub1+sub2+sub3+score)/4;
-        total = sub1+sub2+sub3+score;
-        cout<<"Average Marks: "<<avg<<endl;
-        cout<<"Total Marks: "<<total<<endl;
 
+public:
+    void dispmarks()
+    {
+        avg = (sub1 + sub2 + sub3 + score) / 4;
+        total = sub1 + sub2 + sub3 + score;
+        cout << "Average Marks: " << avg << endl;
+        cout << "Total Marks: " << total << endl;
     }
-    void set(){
+    void set()
+    {
+        setName();
         setroll();
         setmarks();
         setscore();
     }
-    void dispdetail(){
-        cout<<"***************Details*****************"<<endl;
+    void dispdetail()
+    {
+        cout << "***************Details*****************" << endl;
+        dispName();
         disproll();
         dispmarks();
     }

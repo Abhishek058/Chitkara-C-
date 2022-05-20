@@ -6,7 +6,7 @@ class ItemDetails
 public:
     int item_no;
     string item_name;
-    float item_price;
+    int item_price;
 };
 class DiscountedItem : public ItemDetails
 {
@@ -27,14 +27,20 @@ public:
     }
     void displayItem()
     {
-        cout << "Item Name : " << item_name;
-        cout << "Item No. : " << item_no;
-        cout << "Item Price : " << item_price;
-        cout << "Discounted Price : " << discounted_price;
+        cout << "Item Name : " << item_name << endl;
+        cout << "Item No. : " << item_no << endl;
+        cout << "Item Price : " << item_price << endl;
+        cout << "Discounted Price : " << discounted_price << endl;
     }
 };
 int main()
 {
+    int n;
+    ItemDetails item;
+    DiscountedItem DisItem;
+    DisItem.getItem();
+    cout<<"****************************"<<endl;
+    DisItem.displayItem();
 
     return 0;
 }

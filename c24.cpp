@@ -27,10 +27,10 @@ public:
     }
     void displayItem()
     {
-        cout << "Item Name : " << item_name << endl;
-        cout << "Item No. : " << item_no << endl;
-        cout << "Item Price : " << item_price << endl;
-        cout << "Discounted Price : " << discounted_price << endl;
+        cout << "Item Name : " << item_name << "        ";
+        cout << "Item No. : " << item_no << "       ";
+        cout << "Item Price : " << item_price << "      ";
+        cout << "Discounted Price : " << discounted_price << "      ";
     }
 };
 int main()
@@ -39,7 +39,7 @@ int main()
     ItemDetails item;
     DiscountedItem DisItem;
     DisItem.getItem();
-    cout<<"****************************"<<endl;
+    cout<<"*************BILL***************"<<endl;
     DisItem.displayItem();
 
     return 0;

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-template <class T, class U>
+template <class T, class U = float>
 
 class Example
 {
@@ -24,7 +24,7 @@ public:
 
 int main()
 {
-    Example<int, float> obj1;
+    Example<int> obj1;
     Example<char, float> obj2;
     Example<float, string> obj3;
     obj1.set();

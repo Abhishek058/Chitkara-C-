@@ -11,6 +11,8 @@ int main()
     cout<<v2.size()<<endl;
     vector<int> v3(5, 11);
     cout<<v3.size()<<endl;
-
+    for(int i=0; i<5; i++){
+        cout<<v3[i]<<" ";
+    }
     return 0;
 }

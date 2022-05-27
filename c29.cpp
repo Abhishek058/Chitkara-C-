@@ -13,6 +13,7 @@ int main()
     cout<<v3.size()<<endl;
     for(int i=0; i<5; i++){
         cout<<v3[i]<<" ";
-    }
+    }cout<<endl;
+    cout<<v2[4]<<endl;
     return 0;
 }

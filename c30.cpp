@@ -147,18 +147,36 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// using namespace std;
+
+// int SimpIst(int p, int r = 6.5, int t = 5)
+// {
+//     return p * r * t / 100;
+// }
+
+// int main()
+// {
+//     cout << SimpIst(12000) << endl;
+//     cout << SimpIst(12000, 3) << endl;
+//     cout << SimpIst(12000, 3, 10) << endl;
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 
-int SimpIst(int p, int r = 6.5, int t = 5)
-{
-    return p * r * t / 100;
-}
-
 int main()
 {
-    cout << SimpIst(12000) << endl;
-    cout << SimpIst(12000, 3) << endl;
-    cout << SimpIst(12000, 3, 10) << endl;
+    int n;
+    cin >> n;
+    if (n % 2 == 0)
+    {
+        cout << "Even Number" << endl;
+    }
+    else
+    {
+        cout << "Odd Number" << endl;
+    }
     return 0;
 }

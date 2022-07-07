@@ -163,20 +163,144 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     if (n % 2 == 0)
+//     {
+//         cout << "Even Number" << endl;
+//     }
+//     else
+//     {
+//         cout << "Odd Number" << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// class Student
+// {
+//     string stud[5];
+//     int roll[5];
+//     int marks[5];
+//     float perct[5];
+
+// public:
+//     void setdata()
+//     {
+//         cout << "Enter the name, roll number, marks of 5 students: " << endl;
+//         for (int i = 0; i < 5; i++)
+//         {
+//             cin >> stud[i];
+//             cin >> roll[i];
+//             cin >> marks[i];
+//         }
+//     }
+
+//     void perc()
+//     {
+//         for (int i = 0; i < 5; i++)
+//         {
+//             perct[i] = marks[i] / 5;
+//         }
+//     }
+//     void find_topper()
+//     {
+//         float max = 0;
+//         int index = 0;
+//         for (int i = 0; i < 5; i++)
+//         {
+//             if (perct[i] > max)
+//             {
+//                 max = perct[i];
+//                 index = i;
+//             }
+//         }
+//         cout << "Topper is: " << stud[index] << " with percentage: " << max << endl;
+//     }
+//     void showdata()
+//     {
+//         for (int i = 0; i < 5; i++)
+//         {
+//             cout << "Details of " << i << " student: ";
+//             cout << stud[i] << " " << roll[i] << " " << marks[i] << " " << perct[i] << endl;
+//         }
+//     }
+// };
+
+// int main()
+// {
+//     Student s1;
+//     s1.setdata();
+//     s1.perc();
+//     s1.showdata();
+//     s1.find_topper();
+
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 
+void printArray(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+void insertAtBegin(int arr[], int ele, int n)
+{
+    int ans[n + 1];
+    ans[0] = ele;
+
+    // insertion at begining
+    for (int i = 0; i < n; i++)
+    {
+        ans[i + 1] = arr[i];
+    }
+    printArray(ans, n + 1);
+}
+
+void insertAtPos(int arr[], int ele, int n, int pos)
+{
+    int ans[n + 1];
+    // insertion at begining
+    for (int i = 0; i < pos; i++)
+    {
+        ans[i] = arr[i];
+    }
+    for (int i = pos; i < n; i++)
+    {
+        ans[i + 1] = arr[i];
+    }
+    ans[pos] = ele;
+    printArray(ans, n + 1);
+}
+
 int main()
 {
-    int n;
+    int n, ele, indx;
     cin >> n;
-    if (n % 2 == 0)
+    int arr[n];
+    for (int i = 0; i < n; i++)
     {
-        cout << "Even Number" << endl;
+        cin >> arr[i];
     }
-    else
-    {
-        cout << "Odd Number" << endl;
-    }
+    printArray(arr, n);
+    // insertion at begin
+    //  insertAtBegin(arr, 6, n);
+
+    // insertion at any index
+    insertAtPos(arr, 6, n, 3);
+
     return 0;
 }

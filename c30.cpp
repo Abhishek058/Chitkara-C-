@@ -245,62 +245,97 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// using namespace std;
+
+// void printArray(int arr[], int size)
+// {
+//     for (int i = 0; i < size; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+// }
+
+// void insertAtBegin(int arr[], int ele, int n)
+// {
+//     int ans[n + 1];
+//     ans[0] = ele;
+
+//     // insertion at begining
+//     for (int i = 0; i < n; i++)
+//     {
+//         ans[i + 1] = arr[i];
+//     }
+//     printArray(ans, n + 1);
+// }
+
+// void insertAtPos(int arr[], int ele, int n, int pos)
+// {
+//     int ans[n + 1];
+//     // insertion at begining
+//     for (int i = 0; i < pos; i++)
+//     {
+//         ans[i] = arr[i];
+//     }
+//     for (int i = pos; i < n; i++)
+//     {
+//         ans[i + 1] = arr[i];
+//     }
+//     ans[pos] = ele;
+//     printArray(ans, n + 1);
+// }
+
+// int main()
+// {
+//     int n, ele, indx;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     printArray(arr, n);
+//     // insertion at begin
+//     //  insertAtBegin(arr, 6, n);
+
+//     // insertion at any index
+//     insertAtPos(arr, 6, n, 3);
+
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 
-void printArray(int arr[], int size)
+int binarySearch(int arr[], int key, int n)
 {
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-}
+    int s = 0;
+    int e = n - 1;
+    int mid = s + (e - s) / 2;
 
-void insertAtBegin(int arr[], int ele, int n)
-{
-    int ans[n + 1];
-    ans[0] = ele;
-
-    // insertion at begining
-    for (int i = 0; i < n; i++)
+    while (s <= e)
     {
-        ans[i + 1] = arr[i];
+        if (arr[mid] == key)
+        {
+            return mid;
+        }
+        if (arr[mid] < key)
+        {
+            s = mid + 1;
+        }
+        else
+        {
+            e = mid - 1;
+        }
+        mid = s + (e - s) / 2;
     }
-    printArray(ans, n + 1);
-}
-
-void insertAtPos(int arr[], int ele, int n, int pos)
-{
-    int ans[n + 1];
-    // insertion at begining
-    for (int i = 0; i < pos; i++)
-    {
-        ans[i] = arr[i];
-    }
-    for (int i = pos; i < n; i++)
-    {
-        ans[i + 1] = arr[i];
-    }
-    ans[pos] = ele;
-    printArray(ans, n + 1);
+    return -1;
 }
 
 int main()
 {
-    int n, ele, indx;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    printArray(arr, n);
-    // insertion at begin
-    //  insertAtBegin(arr, 6, n);
-
-    // insertion at any index
-    insertAtPos(arr, 6, n, 3);
-
+    int arr[7] = {12, 13, 21, 23, 34, 45, 76};
+    cout << binarySearch(arr, 13, 7);
     return 0;
 }

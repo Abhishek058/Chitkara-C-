@@ -108,7 +108,6 @@ public:
 
             merge(arr, l, mid, r);
         }
-        PrintArray(arr, n);
     }
 };
 
@@ -120,7 +119,7 @@ int main()
     cout << "Select Choice: " << endl;
     cout << "1. Insertion Sort" << endl
          << "2. Selection Sort" << endl
-         << "2. Merge Sort" << endl;
+         << "3. Merge Sort" << endl;
     cin >> choice;
     switch (choice)
     {
@@ -132,6 +131,7 @@ int main()
         break;
     case 3:
         s1.mergesort(arr, 0, 5);
+        s1.PrintArray(arr, 5);
         break;
     }
 

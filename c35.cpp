@@ -83,6 +83,22 @@ void deleteNode(Node *&head, int pos)
     }
 }
 
+int searchNode(Node *&head, int key)
+{
+    Node *temp = head;
+    int pos = 1;
+    while (temp->next != NULL)
+    {
+        if (temp->data == key)
+        {
+            return pos;
+        }
+        pos++;
+        temp = temp->next;
+        return -1;
+    }
+}
+
 void print(Node *&head)
 {
     Node *temp = head;
@@ -111,5 +127,6 @@ int main()
     insertAtTail(tail, 5);
     deleteNode(head, 1);
     print(head);
+    cout<<searchNode(head, 8);
     return 0;
 }

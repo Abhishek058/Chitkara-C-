@@ -17,7 +17,7 @@ public:
 
     void push(int ele)
     {
-        if (size - peak > -1)
+        if (size - peak > 1)
         {
             peak++;
             arr[peak] = ele;
@@ -74,6 +74,8 @@ int main()
     s.push(97);
     s.push(96);
     s.push(95);
+    s.top();
+    s.push(94);
     s.pop();
     s.empty();
     s.top();

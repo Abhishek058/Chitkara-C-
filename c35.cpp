@@ -127,6 +127,6 @@ int main()
     insertAtTail(tail, 5);
     deleteNode(head, 1);
     print(head);
-    cout<<searchNode(head, 8);
+    cout << searchNode(head, 8);
     return 0;
 }
